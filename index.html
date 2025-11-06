@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background -->
+    <div class="background-image"></div>
+    <div class="overlay"></div>
+
+    <!-- Glassmorphism Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-cloud-sun"></i>
+                <span>WeatherPro</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Forecast</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Maps</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Alerts</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Weather Dashboard -->
+    <div class="weather-dashboard">
+        <div class="search-section">
+            <input type="text" id="locationInput" placeholder="Enter city name..." autocomplete="off">
+            <button id="searchBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+        </div>
+
+        <div id="weatherResult" class="main-weather-card">
+            <p class="placeholder-text">Search for a city or see current weather for Ludhiana.</p>
+        </div>
+
+        <div class="forecast-section">
+            <h3 class="section-title">24-Hour Forecast</h3>
+            <div class="forecast-container">
+                <div class="hourly-forecast-card">
+                    <p>11 PM <span class="temp">30°C</span></p>
+                </div>
+                <div class="hourly-forecast-card">
+                    <p>12 AM <span class="temp">28°C</span></p>
+                </div>
+                <div class="hourly-forecast-card">
+                    <p>01 AM <span class="temp">26°C</span></p>
+                </div>
+                <div class="hourly-forecast-card">
+                    <p>02 AM <span class="temp">25°C</span></p>
+                </div>
+                <div class="hourly-forecast-card">
+                    <p>03 AM <span class="temp">24°C</span></p>
+                </div>
+                <div class="hourly-forecast-card">
+                    <p>04 AM <span class="temp">23°C</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="additional-info-section">
+            <div class="detail-card">
+                <div class="detail-icon">
+                    <i class="fas fa-temperature-high"></i>
+                </div>
+                <p>Real Feel</p>
+                <p class="value" id="realFeelVal">--°C</p>
+            </div>
+            <div class="detail-card">
+                <div class="detail-icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <p>Humidity</p>
+                <p class="value" id="humidityVal">--%</p>
+            </div>
+            <div class="detail-card">
+                <div class="detail-icon">
+                    <i class="fas fa-wind"></i>
+                </div>
+                <p>Wind Speed</p>
+                <p class="value" id="windSpeedVal">-- kph</p>
+            </div>
+            <div class="detail-card">
+                <div class="detail-icon">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <p>UV Index</p>
+                <p class="value" id="uvIndexVal">--</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>WeatherPro</h3>
+                    <p>Accurate weather forecasts for your location. Plan your day with confidence.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/amankr421"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/aman-kumar-216bbb255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/AmanKumar41235?t=hf9WL_MpPzDalhpzqZTFPA&s=09"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/mr_aman421?igsh=MW93NnZ4MWFsaWtvaw=="><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Forecast</a></li>
+                        <li><a href="#">Weather Maps</a></li>
+                        <li><a href="#">Alerts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Weather API</a></li>
+                        <li><a href="#">Developer Docs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@weatherpro.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Weather St, Cloud City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 WeatherPro. All rights reserved. | Developed by <strong>Aman Kumar</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
